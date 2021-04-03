@@ -44,7 +44,7 @@ const Form = ({ inputType, label, onSubmit }) => {
     onSubmit(inputValue);
   };
   return (
-    <div className={styles.form}>
+    <form className={styles.form}>
       <div>
         <label htmlFor="input" className={classes.label}>
           {label}
@@ -67,13 +67,14 @@ const Form = ({ inputType, label, onSubmit }) => {
       </div>
       <div>
         <button
+          type="button"
           className={disabled ? styles.disabled : " "}
           onClick={submitHandler}
         >
           {strings.submit}
         </button>
       </div>
-    </div>
+    </form>
   );
 };
 

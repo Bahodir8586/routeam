@@ -4,18 +4,14 @@ import styles from "./Modal.module.css";
 import Backdrop from "../Backdrop";
 
 const Modal = ({ show, modalClosed, children }) => {
+  const classes = [styles.modal];
+  if (show) {
+    classes.push(styles.show);
+  }
   return (
     <>
       <Backdrop show={show} clicked={modalClosed} />
-      <div
-        className={styles.modal}
-        style={{
-          transform: show ? "translateY(0)" : "translateY(-100vh)",
-          opacity: show ? "1" : "0",
-        }}
-      >
-        {children}
-      </div>
+      <div className={classes.join(" ")}>{children}</div>
     </>
   );
 };

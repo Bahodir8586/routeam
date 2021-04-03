@@ -1,7 +1,11 @@
 .video {
   position: relative;
-  padding: 43px 20px;
+  padding: 40px 0;
   margin: 40px 0;
+}
+.video video {
+  width: 100%;
+  height: auto;
 }
 .video button {
   position: absolute;
@@ -16,6 +20,7 @@
   font-weight: 600;
   font-size: 16px;
   cursor: pointer;
+  height: 40px;
 }
 .video button:hover {
   color: white;
