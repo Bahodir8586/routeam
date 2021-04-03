@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import styles from "./Form.module.css";
 import strings from "../../constants/strings";
@@ -6,15 +6,6 @@ import Strings from "../../constants/strings";
 
 const Form = ({ inputType, label, onSubmit }) => {
   const [inputValue, setinputValue] = useState("");
-  const [disabled, setDisabled] = useState(true);
-
-  useEffect(() => {
-    if (inputValue) {
-      setDisabled(false);
-      return;
-    }
-    setDisabled(true);
-  }, [inputValue]);
 
   let classNames = [
     {
@@ -68,9 +59,9 @@ const Form = ({ inputType, label, onSubmit }) => {
         />
       </div>
       <div className={styles.highlight}>
-        <a className={styles.button} onClick={submitHandler}>
+        <div className={styles.button} onClick={submitHandler}>
           {strings.submit}
-        </a>
+        </div>
       </div>
     </form>
   );

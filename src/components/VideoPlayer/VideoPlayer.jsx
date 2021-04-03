@@ -8,9 +8,9 @@ const VideoPlayer = ({ closePlayer, src }) => {
     <div className={styles.video}>
       {/* <button onClick={closePlayer}>{Strings.close}</button> */}
       <div className={styles.round}>
-        <a className={styles.button} onClick={closePlayer}>
+        <div className={styles.button} onClick={closePlayer}>
           {Strings.close}
-        </a>
+        </div>
       </div>
       <video controls autoPlay src={src} />
     </div>

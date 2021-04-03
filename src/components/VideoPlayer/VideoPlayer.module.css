@@ -10,20 +10,11 @@
 
 /* Button STYLES */
 
-a {
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
 .round {
   max-width: 840px;
   margin: 0 auto;
   display: flex;
   justify-content: flex-end;
-}
-
-.round a {
-  color: crimson;
 }
 
 .round .button {
@@ -39,6 +30,9 @@ a {
   overflow: hidden;
   border: 2px solid crimson;
   transition: color 0.5s;
+  text-transform: uppercase;
+  color: crimson;
+  letter-spacing: 2px;
 }
 
 .round .button:before {
