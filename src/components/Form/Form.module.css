@@ -10,22 +10,7 @@
   font-weight: 500;
   margin-bottom: 20px;
 }
-.form button {
-  background-color: white;
-  border: 2px solid black;
-  color: black;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  outline: none;
-  margin: 0 auto;
-}
-.form button:hover {
-  background-color: #1e2a78;
-  color: #f9ff21;
-}
+
 .form span {
   font-size: 12px;
   text-align: center;
@@ -35,35 +20,94 @@
 }
 .labelForText {
   display: block;
+  color: white;
 }
 .inputForText {
   width: 40%;
-  margin: 0 auto;
-  padding: 10px 5px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
 }
 .labelForFile {
   display: inline-block;
+  box-sizing: border-box;
   padding: 10px 20px;
-  border: 1px solid black;
   margin: 0 auto;
   cursor: pointer;
-  transition: all 0.3s ease;
+  position: relative;
+  height: 50px;
+  z-index: 2;
+
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  transition: all 0.5s ease;
+  overflow: hidden;
 }
-.labelForFile:hover {
-  background-color: black;
-  color: #f9ff21;
+.labelForFile:before {
+  content: "";
+  z-index: -1;
+  height: 500px;
+  width: 500px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #071a52;
+  transform: rotate(45deg) translate(-200px, 300px);
+  transition: all 0.8s ease;
+}
+
+.labelForFile:hover:before {
+  top: -100px;
+  left: -100px;
+  transform: translate(0, 0);
 }
 .inputForFile {
   height: 0;
   width: 0;
 }
-.disabled {
-  background-color: #ccc !important;
-  color: #333;
-  cursor: not-allowed !important;
+
+/* Button style */
+.highlight .button {
+  display: inline-block;
+  color: #fff;
+  font-size: 16px;
+  background: darkred;
+  margin: 20px;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
-.disabled:hover {
-  color: #333 !important;
-  opacity: 0.4;
+
+.highlight .button:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -80px;
+  height: 100px;
+  width: 70px;
+  background: rgba(255, 255, 255, 0.7);
+  transform: rotate(20deg);
+}
+
+.highlight .button:hover:before {
+  left: 150px;
+  transition: all 0.5s;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Helvetica;
 }

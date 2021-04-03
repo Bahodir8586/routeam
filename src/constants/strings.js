@@ -6,6 +6,7 @@ const Strings = {
   close: "Закрыть",
   enterCode: "Пожалуйста, введите код",
   chooseFile: "Пожалуйста, выберите файл",
+  enterCodeHere: "Введите код",
 };
 
 export default Strings;

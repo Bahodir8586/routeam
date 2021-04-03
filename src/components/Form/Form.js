@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import styles from "./Form.module.css";
 import strings from "../../constants/strings";
+import Strings from "../../constants/strings";
 
 const Form = ({ inputType, label, onSubmit }) => {
   const [inputValue, setinputValue] = useState("");
@@ -63,16 +64,13 @@ const Form = ({ inputType, label, onSubmit }) => {
           onChange={inputHandler}
           className={classes.input}
           autoComplete="off"
+          placeholder={Strings.enterCodeHere}
         />
       </div>
-      <div>
-        <button
-          type="button"
-          className={disabled ? styles.disabled : " "}
-          onClick={submitHandler}
-        >
+      <div className={styles.highlight}>
+        <a className={styles.button} onClick={submitHandler}>
           {strings.submit}
-        </button>
+        </a>
       </div>
     </form>
   );

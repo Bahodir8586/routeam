@@ -1,28 +1,67 @@
 .video {
   position: relative;
-  padding: 40px 0;
-  margin: 40px 0;
+  padding: 80px 0 40px;
+  /* margin: 40px 0; */
 }
 .video video {
   width: 100%;
   height: auto;
 }
-.video button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 10px 20px;
-  background-color: white;
-  border: 2px solid #ff304f;
-  color: #ff304f;
-  transition: all 0.3s ease;
-  outline: none;
-  font-weight: 600;
-  font-size: 16px;
-  cursor: pointer;
-  height: 40px;
+
+/* Button STYLES */
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
 }
-.video button:hover {
-  color: white;
-  background-color: #ff304f;
+
+.round {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.round a {
+  color: crimson;
+}
+
+.round .button {
+  display: inline-block;
+  width: 130px;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  margin: 20px 0;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid crimson;
+  transition: color 0.5s;
+}
+
+.round .button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: crimson;
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.round .button:hover {
+  color: #fff;
+}
+
+.round .button:before {
+  top: 0;
+  left: -200%;
+  transition: all 0.7s;
+}
+
+.round .button:hover:before {
+  top: -30px;
+  left: -30px;
 }
